@@ -10,9 +10,9 @@ This way, the passphrase is always the same. If I mis-key the passphrase when cr
 ### Setup
 
 1. Create plain text passphrase file `secret`
-1. Encrypt `secret` with `gpg -c secret`, which produces `secret.gpg`
-  1. Suggest using the same passphrase as stored in `secret` and keeping it in your password manager of choice. I.e. for me, `pass`
-1. Delete `secret`
+2. Encrypt `secret` with `gpg -c secret`, which produces `secret.gpg`
+   1. Suggest using the same passphrase as stored in `secret` and keeping it in your password manager of choice. I.e. for me, `pass`
+3. Delete `secret`
 
 ### Day-to-day
 
