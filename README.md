@@ -10,15 +10,15 @@ This way, the passphrase is always the same. If I mis-key the passphrase when cr
 ### Setup
 
 1. Create plain text passphrase file `secret`
-2. Encrypt `secret` with `gpg -c secret`, which produces `secret.gpg`
-  - Suggest using the same passphrase as stored in `secret` and keeping it in your password manager of choice. I.e. for me, `pass`
-3. Delete `secret`
+1. Encrypt `secret` with `gpg -c secret`, which produces `secret.gpg`
+  1. Suggest using the same passphrase as stored in `secret` and keeping it in your password manager of choice. I.e. for me, `pass`
+1. Delete `secret`
 
 ### Day-to-day
 
-* *Encrypt* `notes` by running script: `./gpgencrypt`
+- *Encrypt* `notes` by running script: `./gpgencrypt`
   - produces `notes.gpg`
-* *Decrypt* `notes.gpg` with: gpg notes.gpg
+- *Decrypt* `notes.gpg` with: gpg notes.gpg
   - The reason I don't use `gpg --decrypt secret.gpg` to supply `gpg notes.gpg` with the passphrase is that it's meaningless misdirection. It's only use is keeping the input passphrase the same. 
 
 ## Forgot your password?
