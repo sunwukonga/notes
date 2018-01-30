@@ -1,0 +1,2 @@
+#!/usr/bin/bash
+gpg --decrypt secret.gpg | gpg --yes --batch --passphrase-fd 0 -c notes
