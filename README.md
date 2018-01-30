@@ -16,9 +16,10 @@ This way, the passphrase is always the same. If I mis-key the passphrase when cr
 
 ### Day-to-day
 
-*Encrypt `notes` by running script `./gpgencrypt` to produce `notes.gpg`
-*Decrypt* `notes.gpg` with: gpg notes.gpg
-  -- The reason I don't use `gpg --decrypt secret.gpg` to supply `gpg notes.gpg` with the passphrase is that it's meaningless misdirection. It's only use is keeping the input passphrase the same. 
+* *Encrypt* `notes` by running script: `./gpgencrypt`
+  - produces `notes.gpg`
+* *Decrypt* `notes.gpg` with: gpg notes.gpg
+  - The reason I don't use `gpg --decrypt secret.gpg` to supply `gpg notes.gpg` with the passphrase is that it's meaningless misdirection. It's only use is keeping the input passphrase the same. 
 
 ## Forgot your password?
 
@@ -31,8 +32,6 @@ Never add the raw notes file to this repository.
 ## Necessary files
 
 Files that do not appear in this repository, but which are necessary for it to operate are:
-`secret.gpg` -- encrypted passphrase file
-`notes`      -- content to be encrypted
-`secret`     -- transient plaintext that `secret.gpg` is produced from
-
-gpg --decrypt secret.gpg | gpg --yes --batch --passphrase-fd 0 -c notes
+  - `secret.gpg` -- encrypted passphrase file
+  - `notes`      -- content to be encrypted
+  - `secret`     -- transient plaintext that `secret.gpg` is produced from
